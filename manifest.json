@@ -1,0 +1,27 @@
+{
+  "name": "Life Analytics Browser",
+  "version": "1",
+  "manifest_version": 2,
+  "minimum_chrome_version": "31.0.1650.4",
+  "background": {
+    "scripts": [
+      "main.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "css": [],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "*://*/*",
+    "storage",
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
